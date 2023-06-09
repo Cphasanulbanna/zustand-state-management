@@ -6,3 +6,8 @@ export const useCounterStore = create((set) => ({
     decrementCount: () => set((state) => ({ count: state.count - 1 })),
     resetCount: () => set((state) => ({ count: (state.count = 0) })),
 }));
+
+export const useToggleStore = create((set) => ({
+    showtext: false,
+    toggleText: () => set((state) => ({ showtext: !state.showtext })),
+}));
