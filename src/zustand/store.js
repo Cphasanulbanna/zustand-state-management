@@ -11,3 +11,12 @@ export const useToggleStore = create((set) => ({
     showtext: false,
     toggleText: () => set((state) => ({ showtext: !state.showtext })),
 }));
+
+export const useUserStore = create((set) => ({
+    userinfo: {
+        name: "",
+        age: 0,
+        email: "",
+    },
+    updateUserinfo: (newInfo) => set((state) => ({ userinfo: { ...state.userinfo, ...newInfo } })),
+}));
